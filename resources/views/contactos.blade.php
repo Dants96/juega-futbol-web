@@ -53,7 +53,7 @@
                   <div class="row">
                     <div class="col-7">
                       <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-envelope"></i></span>Email: diegodelgado2099@gmail.com x</li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-envelope"></i></span>Email: diegodelgado2099@gmail.com</li>
                         <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono#: + 57 312 268 3418</li>
                       </ul>
                     </div>
