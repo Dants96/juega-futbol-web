@@ -17,13 +17,14 @@ Route::get('series/game-of-thrones/', ['middleware' => 'age:18', function () {
 }]);
 
 */
-//Route::resource('users', 'UserController'); //recurso para usuarios, usercontroler
-//Route::get('acceder', 'Seguridad\LoginController@index')->name('acceder');
-//Route::post('acceder', 'Seguridad\LoginController@login')->name('acceder_post');
-//Route::get('partidos','reservaController@index');
-/*Route::get('/misreservas', ['middleware' => 'auth', function(){
+Route::resource('users', 'UsuarioController')->name('registrar'); //recurso para usuarios, usercontroler
+Route::get('acceder', 'Seguridad\LoginController@index')->name('acceder');
+Route::post('acceder', 'Seguridad\LoginController@login')->name('acceder_post');
+Route::get('partidos','reservaController@index');
+Route::get('/misreservas', ['middleware' => 'auth', function(){
     return view('profile');
-}]);*/
+}]);
+
 
 Route::get('/reservar', 'ReservaController@index')->name('reservar.listar');
 

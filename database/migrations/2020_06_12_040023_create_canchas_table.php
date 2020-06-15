@@ -14,7 +14,7 @@ class CreateCanchasTable extends Migration
     public function up()
     {
         Schema::create('canchas', function (Blueprint $table) {
-            $table -> string('id_pro');
+            $table -> string('id');
             $table -> string('nom_pro');
             $table -> string('id_loc') ;
             $table -> string('nom_loc');
