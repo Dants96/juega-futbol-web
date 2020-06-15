@@ -1,10 +1,10 @@
 <?php
 
-namespace JuegaFutbol\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use JuegaFutbol\Usuario;
-use JuegaFutbol\Http\Requests\UsuarioStoreRequest;
+use App\Usuario;
+use App\Http\Requests\UsuarioStoreRequest;
 
 
 class UserController extends Controller
@@ -49,6 +49,7 @@ class UserController extends Controller
         echo $request->input('user');
         echo ' ha sido registrado, porfavor inicie secion");</script>';
         return view('index'); 
+        // ingresar apenas registre nuevo usuario.
     }
 
     /**

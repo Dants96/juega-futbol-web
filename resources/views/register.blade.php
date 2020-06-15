@@ -24,7 +24,7 @@ Registrar
 </div>
 @endif
 <div class="card-body">
-<form class="form-group" action="{{route('registrar')}}" method="POST">
+<form class="form-group" action="{{route('registrar_post')}}" method="POST">
       @csrf
       <div class="input-group mb-3">
       <input type="text" class="form-control" placeholder="Cédula" name="cedula" required value="{{ old('cedula') }}">
