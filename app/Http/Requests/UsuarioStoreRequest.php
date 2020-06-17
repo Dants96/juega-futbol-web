@@ -28,7 +28,7 @@ class UsuarioStoreRequest extends FormRequest
             'user' => 'required|max:100',
             'email' => 'required|max:50|email|unique:usuarios,email_cli',
             'phone' => 'required|digits:10',
-            'password' => 'required|max:30|min:8|confirmed',
+            'password' => 'required|max:16|min:8|confirmed',
         ];
     }
 

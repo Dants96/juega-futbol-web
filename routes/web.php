@@ -20,6 +20,7 @@ Route::get('series/game-of-thrones/', ['middleware' => 'age:18', function () {
 Route::post('registrar', 'RegistroController@store')->name('registrar_post') ; //recurso para usuarios, usercontroler
 Route::get('acceder', 'Seguridad\LoginController@index')->name('acceder');
 Route::post('acceder', 'Seguridad\LoginController@login')->name('acceder_post');
+Route::post('salir', 'Seguridad\LoginController@logout')->name('salir');
 Route::get('partidos','reservaController@index');
 Route::get('/misreservas', ['middleware' => 'auth', function(){
     return view('profile');
