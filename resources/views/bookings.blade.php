@@ -14,13 +14,13 @@
       </section>
       <div class="card card-primary caja" >                    
               <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action active">Reservas hechas</a>
+                  <a href="#" class="list-group-item list-group-item-action active"><h2>Reservas hechas </h2></a>
               @isset($schedules)
               @foreach($schedules as $schedule )
                 <a class="list-group-item list-group-item-action disabled"  tabindex="-1" aria-disabled="true">{{$schedule -> hora_res}} PM {{$schedule -> fecha_res}}  partido <button class="btn btn-danger">Cancelar</button>
               @endforeach
               @else
-                La cancha no dispone de partidos
+                <h2>No ha reservado aun..</h2>
               @endisset
               </div>
       </div>

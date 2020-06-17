@@ -60,10 +60,10 @@
                     </div>
                     <div class="card-footer">
                         <div class="text-right">
-                            <a href="#" class="btn btn-sm btn-primary">
-                                <i class="fas fa-clock"></i> Horarios
+                            <a href="{{route('reservar.crear')}}" class="btn btn-sm btn-primary">
+                                <i class="fas fa-clock"></i> Reservas
                             </a>
-                            <a href="#" class="btn btn-sm btn-secondary">
+                            <a href="{{url('/perfil')}}" class="btn btn-sm btn-secondary">
                                 <i class="fas fa-user"></i> ver cancha
                             </a>
                         </div>

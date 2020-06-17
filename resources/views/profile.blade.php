@@ -19,7 +19,7 @@
               </div>
             </div>
             <div class="col-12 col-sm-6">
-              <h3 class="my-3">Canch las americas</h3>
+              <h3 class="my-3">Cancha las americas</h3>
               <p>
                 Ubicada en el centro de la ciudad.
               </p>
@@ -39,7 +39,7 @@
                   $50.000
                 </h2>
                 <h4 class="mt-0">
-                  <small>Dos Horas $90.000 </small>
+                  <small>Una hora completa </small>
                 </h4>
               </div>
 

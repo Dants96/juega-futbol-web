@@ -44,7 +44,7 @@ reservas para el dia dispuesto
             <!-- jquery validation -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title"> %Usuario Reserva la cancha</h3>
+                <h3 class="card-title"> <strong>{{ Auth::user()-> nom_cli}}</strong> Reserva la cancha</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->

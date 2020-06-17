@@ -21,12 +21,13 @@ Route::post('registrar', 'RegistroController@store')->name('registrar_post') ; /
 Route::get('acceder', 'Seguridad\LoginController@index')->name('acceder');
 Route::post('acceder', 'Seguridad\LoginController@login')->name('acceder_post');
 Route::post('salir', 'Seguridad\LoginController@logout')->name('salir');
-Route::get('partidos','reservaController@index');
-Route::get('/misreservas', ['middleware' => 'auth', function(){
-    return view('profile');
-}]);
+Route::get('misreservas', 'ReservaController@index')->name('reservar.listar');
+Route::get('reservar', 'ReservaController@create')->name('reservar.crear');
+//Route::get('/misreservas', ['middleware' => 'auth', function(){
+ //   return Route('bookings');
+//}]);
 
-Route::get('/reservar', 'ReservaController@index')->name('reservar.listar');
+
 
 Route::get('/home', function () {
     return view('index');

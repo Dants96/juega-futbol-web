@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\reserva;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class ReservaController extends Controller
 {
@@ -13,17 +14,14 @@ class ReservaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
       
     
 
-        $schedules =  reserva::where('id_cancha', $request )->whereDate('fecha_res', '=', 
-            Carbon::now()->format('Y-m-d'))->get();
-
-        return view('newbookings', [
-            'schedules' => $schedules
-        ]);
+        $schedules =  DB::table('reservas')->where('usuario', '=','1085312229')->get();
+     //   ->whereDate('fecha_res', '=', Carbon::now()->format('Y-m-d'))->get();
+        return view('bookings', compact('schedules'));
 
     }
 
@@ -34,7 +32,7 @@ class ReservaController extends Controller
      */
     public function create()
     {
-        //
+        return view('newbookings');
     }
 
     /**
