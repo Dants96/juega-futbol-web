@@ -14,8 +14,8 @@
         <link href="{{ asset('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700')}}" rel="stylesheet">
 
         <style type="text/css">
-            @yield('add-style')
-            div.caja {
+            
+            .caja {
                 margin-left: 5%;
                 margin-right: 5%;
             }
@@ -43,6 +43,7 @@
             .caja-slide{
                 height: 80%
             }
+            @yield('add-style')
         </style>
 
     </head>
