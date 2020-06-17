@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        @yield('add-head')
         <title>JuegaFutbol - @yield('title')</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +14,7 @@
         <link href="{{ asset('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700')}}" rel="stylesheet">
 
         <style type="text/css">
-
+            @yield('add-style')
             div.caja {
                 margin-left: 5%;
                 margin-right: 5%;
@@ -38,6 +39,10 @@
             footer .copyright span {
             color: #0894d1;
             }
+
+            .caja-slide{
+                height: 80%
+            }
         </style>
 
     </head>
@@ -48,7 +53,7 @@
                 <a href="{{url('/')}}" class="navbar-brand">
                     <img src="dist/img/icon.svg" alt="Juega Futbol" class="brand-image img-square"
                         style="opacity: .8">
-                    <span class="brand-text font-weight-light">Juega Futbol</span>
+                    <span class="brand-text font-weight-light" style="padding-left: 5px">Juega Futbol</span>
                 </a>
                 
                 <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

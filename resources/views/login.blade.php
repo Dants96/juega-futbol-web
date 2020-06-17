@@ -1,8 +1,14 @@
 @extends('layouts.layout_general')
 
 @section('title', 'Acceder')
+@section('add-style')
+    .card{
+      width: 30rem;
+    }
+@endsection
 
 @section('contenido')
+  <br>
   <br>
   <br>
   <section style="text-align:center">

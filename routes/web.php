@@ -26,16 +26,19 @@ Route::get('/misreservas', ['middleware' => 'auth', function(){
     return view('profile');
 }]);
 
-
 Route::get('/reservar', 'ReservaController@index')->name('reservar.listar');
+
+Route::get('/home', function () {
+    return view('index');
+});
 
 Route::get('/', function(){
     return view('index');
 });
 
-Route::get('/registrar', function(){
+Route::get('/registrar',['middleware' => 'guest', function(){
     return view('register');
-});
+}]);
 
 Route::get('/canchas','CanchaController@index');
 
@@ -49,9 +52,9 @@ Route::get('/test', function(){
     return view('bookings');
 });
 
-Route::get('/perfil', function(){
+Route::get('/perfil',['middleware' => 'auth', function(){
     return view('profile');
-});
+}]);
 
 Route::get('/camp', function(){
     return view('camp_profile');
