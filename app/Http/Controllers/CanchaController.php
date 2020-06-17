@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\cancha;
+use App\Cancha;
+use App\Locale;
+use App\Tipo;
+
 use Illuminate\Http\Request;
 
 class CanchaController extends Controller
@@ -14,11 +17,11 @@ class CanchaController extends Controller
      */
     public function index()
     {
-        $canchas = cancha::all();
+        $tipos = Tipo::all();
+        $canchas = Cancha::all();
+        $locales = Locale::all();
         
-        return view('canchas', [
-            'canchas' => $canchas
-        ]);
+        return view('canchas', compact('locales', 'canchas','tipos'));
     }
 
     /**

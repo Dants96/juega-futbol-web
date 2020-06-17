@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cancha extends Model
+class Locale extends Model
 {
     //
 }
