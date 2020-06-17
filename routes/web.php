@@ -28,6 +28,12 @@ Route::get('/misreservas', ['middleware' => 'auth', function(){
 
 Route::get('/reservar', 'ReservaController@index')->name('reservar.listar');
 
+Route::get('/perfil', ['middleware' => 'auth',function(){
+    return view('user_profile');
+}
+
+]);
+
 Route::get('/home', function () {
     return view('index');
 });
@@ -51,10 +57,6 @@ Route::get('/contactos', function(){
 Route::get('/test', function(){
     return view('bookings');
 });
-
-Route::get('/perfil',['middleware' => 'auth', function(){
-    return view('profile');
-}]);
 
 Route::get('/camp', function(){
     return view('camp_profile');

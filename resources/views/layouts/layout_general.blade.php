@@ -88,7 +88,7 @@
                                 {{ Auth::user()-> nom_cli}} <span class="caret"></span><!--fallo probable-->
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="nav-link" href="#">Perfil</a>
+                                    <a class="nav-link" href="{{ url('/perfil') }}">Perfil</a>
                                     <a class="nav-link" href="{{ route('salir') }}" onclick="event.preventDefault(); document.getElementById('salir-form').submit();">Salir</a>
                                     <form id="salir-form" action=" {{route('salir')}} " method="POST" style="display: none;">
                                     {{ csrf_field() }}
